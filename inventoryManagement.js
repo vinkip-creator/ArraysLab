@@ -1,5 +1,30 @@
-// Write your code here
+products = [
+  {
+    name: 'Laptop',
+    name: 'Phone',
+    name: 'Headphones',
+    name: 'Monitor', 
+  }
+];
 
+logFirstProduct = () => {
+  console.log(products[0].name);
+}
+
+addProduct = (product) => {
+  newProduct = { name: product };
+  products.push(newProduct);
+}
+
+updateProductName = (index, newName) => {
+  if (index >= 0 && index < products.length) {
+    products[index].name = newName;
+  }
+};
+
+removeLastProduct = () => {
+  products.pop();
+} 
 
 
 // Export the necessary parts for testing
